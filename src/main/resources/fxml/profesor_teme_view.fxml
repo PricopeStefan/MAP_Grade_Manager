@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="372.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProfesorTeme">
+   <children>
+      <BorderPane fx:id="borderPane" prefHeight="662.0" prefWidth="844.0" styleClass="borderPane" stylesheets="@../css/profesor.css">
+         <top>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#doLogout" prefHeight="66.0" prefWidth="130.0" styleClass="menuButton" text="Logout">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="temeButton" disable="true" mnemonicParsing="false" prefHeight="66.0" prefWidth="130.0" styleClass="menuButton" text="Teme">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="noteButton" mnemonicParsing="false" onAction="#setupNoteForm" prefHeight="66.0" prefWidth="130.0" styleClass="menuButton" text="Note">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#setupRapoarteForm" prefHeight="66.0" prefWidth="130.0" styleClass="menuButton" text="Rapoarte">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="35.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+         <right>
+            <VBox alignment="TOP_CENTER" prefHeight="411.0" prefWidth="507.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="TOP_LEFT" text="Dublu click pe orice tema pentru a prelungi deadlineul">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" right="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TableView fx:id="tableView" prefHeight="351.0" prefWidth="480.0" styleClass="tableView">
+                    <columns>
+                      <TableColumn fx:id="idColoana" prefWidth="52.0" text="ID" />
+                      <TableColumn fx:id="descriereColoana" prefWidth="236.0" text="Descriere" />
+                        <TableColumn fx:id="primireColoana" prefWidth="114.0" text="Sapt primire" />
+                        <TableColumn fx:id="deadlineColoana" prefWidth="78.0" text="Deadline" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets right="25.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <Button fx:id="deleteTemaButton" mnemonicParsing="false" onAction="#deleteTema" prefHeight="38.0" prefWidth="91.0" styleClass="addButton" text="Delete">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </right>
+         <left>
+            <GridPane fx:id="temeGridPane" alignment="CENTER" prefHeight="529.0" prefWidth="286.0" style="-fx-border-color: black;" styleClass="gridPane" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.0" minWidth="10.0" prefWidth="110.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="213.0" minWidth="10.0" prefWidth="164.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="172.0" minHeight="0.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="353.0" minHeight="0.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="353.0" minHeight="0.0" prefHeight="54.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="353.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="433.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="ID:" />
+                  <TextField fx:id="idInput" GridPane.columnIndex="1" />
+                  <Label text="Descriere:" GridPane.rowIndex="1" />
+                  <TextField fx:id="descriereInput" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="primireInput" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Sapt. primire:" GridPane.rowIndex="2" />
+                  <Label text="Deadline:" GridPane.rowIndex="3" />
+                  <TextField fx:id="deadlineInput" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button fx:id="addTemaButton" mnemonicParsing="false" onAction="#addTema" prefHeight="39.0" prefWidth="169.0" styleClass="addButton" text="Adauga tema" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="50.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets left="25.0" />
+               </BorderPane.margin>
+            </GridPane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

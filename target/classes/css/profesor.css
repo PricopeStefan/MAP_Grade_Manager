@@ -1,0 +1,105 @@
+/* GENERAL PROFESOR CSS */
+.borderPane {
+    /*-fx-background-color:  #F3DE8A; */
+    -fx-background-image: url("../img/background.png");
+    -fx-background-size: 844 662;
+}
+
+.button {
+    -fx-background-radius: 25;
+    -fx-effect : dropshadow(three-pass-box, black, 10, 0, 0, 0)
+}
+
+.button :hover {
+    -fx-cursor: hand;
+}
+
+
+.menuButton {
+    -fx-background-color: #7E7F9A;
+    -fx-text-fill: #F9F8F8;
+}
+.menuButton:hover {
+    -fx-background-color: #3B5998;
+}
+
+.optionButton {
+    -fx-background-color: #EDDFED;
+    -fx-text-fill: black;
+}
+.optionButton:hover {
+    -fx-background-color: #8b9dc3;
+}
+
+.label {
+    -fx-text-fill: black;
+}
+
+.label .text {
+    -fx-font-size: 17;
+
+    -fx-font-weight: bold;
+
+}
+
+.dialog-pane {
+    -fx-background-color: red;
+}
+
+
+/* ADD NOTA CSS */
+.gridPane {
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-opacity: 0.95;
+    -fx-background-color: #6cbfce ;
+}
+
+
+.check-box {
+    -fx-text-fill: black;
+}
+.check-box .text{
+    -fx-font-size: 17;
+    -fx-font-weight: bold;
+}
+
+.userInput {
+    -fx-background-color: #f7f7f7 ;
+    -fx-background-radius: 10;
+}
+
+.tableView {
+    -fx-background-color: #f9f9f9;
+    -fx-padding: 0 0 0 0;
+}
+
+.tableView .column-header {
+    -fx-background-color: 	#8b9dc3;
+    -fx-border-width: 0.3;
+    -fx-border-color: black;
+}
+
+.addButton {
+    -fx-background-color : #e1f2f5;
+    -fx-font-size: 17;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+/* FILTER CSS */
+
+.filterButton {
+    -fx-background-color: #ffffe0;
+    -fx-text-fill: black;
+    -fx-font-size: 22;
+    -fx-font-weight: bold;
+}
+.filterButton:hover {
+    -fx-background-color: lightgreen;
+    -fx-text-fill: black;
+}
+
+.dialogus {
+    -fx-background-color: red;
+}

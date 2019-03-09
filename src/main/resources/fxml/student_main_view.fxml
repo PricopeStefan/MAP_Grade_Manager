@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="592.0" prefWidth="924.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentMain">
+   <children>
+      <BorderPane prefHeight="592.0" prefWidth="924.0" styleClass="borderPane" stylesheets="@../css/student.css">
+         <top>
+            <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#doLogout" prefHeight="61.0" prefWidth="165.0" styleClass="logoutButton" stylesheets="@../css/student.css" text="Logout" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </top>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+         <left>
+            <VBox alignment="TOP_CENTER" prefHeight="516.0" prefWidth="474.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="medieCurenta" prefHeight="27.0" prefWidth="352.0" styleClass="titleLabel" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TableView id="noteTable" fx:id="tableNote" prefHeight="211.0" prefWidth="444.0">
+                    <columns>
+                      <TableColumn fx:id="notaTemaIDColumn" prefWidth="57.0" text="ID Tema" />
+                      <TableColumn fx:id="notaTemaDescColumn" prefWidth="138.0" text="Descriere" />
+                        <TableColumn fx:id="notaTemaPredataColumn" prefWidth="75.0" text="Predata pe" />
+                        <TableColumn fx:id="notaProfesorColumn" prefWidth="107.0" text="Profesor" />
+                        <TableColumn fx:id="notaValoareColumn" prefWidth="64.0" text="Nota" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <Label styleClass="titleLabel" text="Teme curente" textFill="#cb9cf2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TableView id="noteTable" fx:id="tableTeme" prefHeight="129.0" prefWidth="444.0">
+                    <columns>
+                      <TableColumn fx:id="temaIDColumn" prefWidth="63.0" text="ID Tema" />
+                      <TableColumn fx:id="temaDescColumn" prefWidth="236.0" text="Descriere tema" />
+                        <TableColumn fx:id="temaSaptPrimireColumn" prefWidth="75.0" text="Sapt primire" />
+                        <TableColumn fx:id="temaDeadlineColumn" prefWidth="67.0" text="Deadline" />
+                    </columns>
+                  </TableView>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="25.0" />
+               </padding>
+            </VBox>
+         </left>
+         <right>
+            <VBox alignment="CENTER" prefHeight="516.0" prefWidth="451.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <LineChart fx:id="evolutionLineChart" prefHeight="411.0" prefWidth="461.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" tickLabelFill="WHITE">
+                           <tickLabelFont>
+                              <Font size="15.0" />
+                           </tickLabelFont></CategoryAxis>
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis minorTickCount="2" minorTickLength="2.0" side="LEFT" tickLabelFill="WHITE" tickUnit="2.0" upperBound="10.0">
+                           <tickLabelFont>
+                              <Font size="12.0" />
+                           </tickLabelFont></NumberAxis>
+                    </yAxis>
+                  </LineChart>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="25.0" />
+               </padding>
+            </VBox>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="662.0" prefWidth="844.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProfesorRapoarte">
+   <children>
+      <BorderPane prefHeight="662.0" prefWidth="844.0" styleClass="borderPane" stylesheets="@../css/profesor.css">
+         <top>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#doLogout" prefHeight="66.0" prefWidth="130.0" styleClass="menuButton" text="Logout">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#setupTemeForm" prefHeight="66.0" prefWidth="130.0" styleClass="menuButton" text="Teme">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#setupNoteForm" prefHeight="66.0" prefWidth="130.0" styleClass="menuButton" text="Note">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button disable="true" mnemonicParsing="false" prefHeight="66.0" prefWidth="130.0" styleClass="menuButton" text="Rapoarte">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <VBox alignment="CENTER" prefHeight="466.0" prefWidth="265.0" spacing="25.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="button1" mnemonicParsing="false" onAction="#labGrade" prefHeight="90.0" prefWidth="225.0" styleClass="optionButton" text="Nota laborator pentru fiecare student" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button2" mnemonicParsing="false" onAction="#canEnter" prefHeight="90.0" prefWidth="225.0" styleClass="optionButton" text="Studentii care pot intra in examen" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button3" mnemonicParsing="false" onAction="#turnedOnTime" prefHeight="90.0" prefWidth="225.0" styleClass="optionButton" text="Studentii care au predat la timp toate temele" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button4" mnemonicParsing="false" onAction="#withMissingHomework" prefHeight="90.0" prefWidth="225.0" styleClass="optionButton" text="Studentii care au teme in intarziere" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="15.0" />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <right>
+            <GridPane fx:id="gridPane" alignment="CENTER" prefHeight="466.0" prefWidth="548.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="394.0" minHeight="10.0" prefHeight="377.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="150.0" minHeight="0.0" prefHeight="80.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <BorderPane.margin>
+                  <Insets bottom="15.0" right="15.0" top="15.0" />
+               </BorderPane.margin>
+               <children>
+                  <Button fx:id="savePDFButton" mnemonicParsing="false" text="Salveaza ca pdf" textAlignment="CENTER" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+.root {
+    -fx-background-image: url("../img/mountains.png");
+
+}
+
+.button {
+    -fx-background-radius: 40;
+    -fx-background-color: #7E7F9A;
+    -fx-text-fill: #F9F8F8;
+    -fx-font-size: 16;
+}
+
+.button:hover {
+    -fx-background-color: #3B5998;
+}
+
+.text-field {
+    -fx-background-radius: 40;
+    -fx-background-color: #f7f7f7 ;
+}
+
+.label {
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+}
+
+.tableView .column-header {
+    -fx-background-color: royalblue;
+}
+
+.tableView .column-header .label {
+    -fx-text-fill: white;
+}

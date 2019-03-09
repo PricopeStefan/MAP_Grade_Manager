@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane prefHeight="627.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Filtrari">
+   <children>
+      <VBox fx:id="vBox" prefHeight="627.0" prefWidth="600.0">
+         <children>
+            <TableView fx:id="tableView" prefHeight="281.0" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="SID" prefWidth="48.0" text="SID" />
+                <TableColumn fx:id="Nume" prefWidth="102.0" text="Nume" />
+                  <TableColumn fx:id="Grupa" prefWidth="66.0" text="Grupa" />
+                  <TableColumn fx:id="TID" prefWidth="70.0" text="TID" />
+                  <TableColumn fx:id="Tema" prefWidth="174.0" text="Tema" />
+                  <TableColumn fx:id="PredataPe" text="Predata Pe" />
+                  <TableColumn fx:id="Nota" prefWidth="59.0" text="Nota" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</Pane>

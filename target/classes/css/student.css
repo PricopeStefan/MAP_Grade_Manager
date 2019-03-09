@@ -1,0 +1,35 @@
+.borderPane {
+    -fx-background-image: url("../img/student.jpg");
+}
+
+.borderPane .label {
+    -fx-font-weight: bold;
+}
+
+.logoutButton {
+    -fx-background-radius: 50;
+    -fx-cursor : hand;
+    -fx-background-color: royalblue;
+    -fx-text-fill: #F9F8F8;
+}
+.logoutButton:hover {
+    -fx-background-color: #EDDFED;
+    -fx-text-fill: black;
+}
+
+.titleLabel {
+    -fx-text-fill: white;
+}
+
+
+#noteTable .column-header {
+    -fx-background-color: royalblue;
+
+}
+#noteTable .column-header .label {
+    -fx-text-fill: white;
+}
+
+#noteTable .filler {
+    -fx-background-color: transparent;
+}

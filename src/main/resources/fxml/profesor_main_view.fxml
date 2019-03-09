@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="662.0" prefWidth="844.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProfesorMain">
+   <children>
+      <BorderPane prefHeight="662.0" prefWidth="844.0" styleClass="borderPane" stylesheets="@../css/profesor.css">
+         <top>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="643.0" spacing="15.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#doLogout" prefHeight="66.0" prefWidth="130.0" styleClass="menuButton" text="Logout">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#setupTemeForm" prefHeight="66.0" prefWidth="130.0" styleClass="menuButton" text="Teme">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#setupNoteForm" prefHeight="66.0" prefWidth="130.0" styleClass="menuButton" text="Note">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#setupRapoarteForm" prefHeight="66.0" prefWidth="130.0" styleClass="menuButton" text="Rapoarte">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
